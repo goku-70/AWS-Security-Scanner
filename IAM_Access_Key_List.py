@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[38]:
-
-
+#Script to list access keys
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[39]:
-
-
 results = []
-
-
-# In[59]:
-
-
 def scan():
     iam = boto3.client('iam')
     for user in iam.list_users()['Users']:
@@ -26,4 +11,3 @@ def scan():
         print(access_keys)
 
 scan()
-
