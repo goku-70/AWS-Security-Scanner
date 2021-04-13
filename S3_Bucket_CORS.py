@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+#Script to check S3 Bucket CORS (Cross-Orgin Resource Sharing)
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[2]:
-
-
 results = []
-
-
-# In[3]:
-
-
 def scan():
     s3 = boto3.client('s3')
 
@@ -42,10 +27,3 @@ def scan():
             })
     print(results)
 scan()
-
-
-# In[ ]:
-
-
-
-
