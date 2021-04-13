@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
+#Script to check if S3 Bucket Server Logging is Enabled or Disabled
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[3]:
-
-
 s3client = boto3.client('s3')
-
-
-# In[4]:
-
-
 def scan():
     results = []
     s3 = boto3.client('s3')
@@ -35,11 +20,5 @@ def scan():
                 'ServerLogging': 'Server Logging is Disabled'
             })
     print(results)
+    
 scan()
-
-
-# In[ ]:
-
-
-
-
