@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[13]:
-
-
+#Script to check S3 Bucket Versioning
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[14]:
-
-
 results = []
-
-
-# In[22]:
-
-
 def scan():
     s3 = boto3.client('s3')
     
@@ -44,10 +29,3 @@ def scan():
     print(results) 
 
 scan()
-
-
-# In[ ]:
-
-
-
-
