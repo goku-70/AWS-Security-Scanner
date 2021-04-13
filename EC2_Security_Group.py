@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[104]:
-
-
+#Script to check security group configuration
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[105]:
-
-
 result = []
-
-
-# In[128]:
-
-
 def scan():
 
     client = boto3.client('ec2')
@@ -36,10 +21,3 @@ def scan():
             print(E)
             
 scan()
-
-
-# In[ ]:
-
-
-
-
