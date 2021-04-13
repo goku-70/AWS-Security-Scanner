@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[23]:
-
-
+#Script to check IAM User List
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[24]:
-
-
 results = []
-
-
-# In[27]:
-
-
 def scan():
     iam = boto3.client('iam')
     
@@ -25,10 +10,3 @@ def scan():
 
     print(user_list)
 scan()
-
-
-# In[ ]:
-
-
-
-
