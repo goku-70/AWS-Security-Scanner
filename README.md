@@ -1,4 +1,4 @@
-# AWS-Security-Scanner
+# AWS-Security-Scanner [Scan, Detect and Remediate the Security Weakness]
 
 <b>AWS CLI - Quick configuration with aws configure:</b>
 
