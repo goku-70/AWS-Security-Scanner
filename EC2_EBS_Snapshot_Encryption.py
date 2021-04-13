@@ -1,25 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
+#Script to check EBS snapshot encrypted or not
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[7]:
-
-
 assets_data_output = []
 issues_data_output = []
 events_data_output = []
-
-
-# In[8]:
-
-
 def scan():
     # Init EC2 boto3 client
     # We'll need to loop through every region
@@ -61,16 +46,4 @@ def scan():
                     'metadata': {}
                 })
         return assets_data_output, issues_data_output
-
-
-# In[9]:
-
-
 scan()
-
-
-# In[ ]:
-
-
-
-
