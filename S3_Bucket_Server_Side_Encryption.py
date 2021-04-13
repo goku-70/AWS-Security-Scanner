@@ -1,23 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+#Script to check if S3 Bucket Server Side Encryption is Enabled or Disabled
 import boto3
 from botocore.exceptions import ClientError
 from datetime import timezone, date, datetime, timedelta
-
-
-# In[2]:
-
-
 results = []
-
-
-# In[3]:
-
-
 def scan():
     s3 = boto3.client('s3')
 
@@ -41,13 +26,5 @@ def scan():
                 'BucketName': 'Unexpected Error',
             })
     print(results)
-
-
+    
 scan()
-
-
-# In[ ]:
-
-
-
-
